@@ -1,7 +1,5 @@
 import { ethers } from "hardhat";
-/*
 import { AuthProvider } from '@arcana/auth';
-*/
 
 async function main() {
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
@@ -17,27 +15,23 @@ async function main() {
 
   console.log(`Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`);
 
-/*
   const auth = new AuthProvider('52');
 
   const Name = process.env.NFT_COLLECTION_NAME || "MI9",
   Symbol = process.env.NFT_COLLECTION_SYMBOL || "MI9";
-*/
 
   /*
    * Initialize the AuthProvider
   */
-/*
   await auth.init({
     appMode: 2,
     position: "right",
   });
   let an_provider = auth.getProvider();
-*/
   /*
    * Get the Signer
    */
-/*  const provider = new ethers.providers.Web3Provider(an_provider);
+  const provider = new ethers.providers.Web3Provider(an_provider);
   const signer = provider.getSigner();
 
   // We get the contract to deploy
@@ -47,7 +41,6 @@ async function main() {
   const AERC721 = await AERC721_factory.deploy(Name, Symbol, signer);
   await AERC721.deployed();
   console.log("NFT Contract deployed to:", AERC721.address);
-*/
 }
 
 // We recommend this pattern to be able to use async/await everywhere
